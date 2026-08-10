@@ -1,0 +1,278 @@
+.app {
+  --background: #f5f7fb;
+  --background-secondary: #eef2f7;
+
+  --text: #1e293b;
+  --text-secondary: #64748b;
+
+  --card: #ffffff;
+
+  --border: #dbe2ea;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --input: #ffffff;
+
+  --navbar: #a625eb;
+
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  min-height: 100vh;
+
+  background: var(--background);
+  color: var(--text);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* ==============================
+   DARK THEME
+============================== */
+
+.app.dark {
+  --background: #0f172a;
+  --background-secondary: #1e293b;
+
+  --text: #f8fafc;
+  --text-secondary: #cbd5e1;
+
+  --card: #1e293b;
+
+  --border: #334155;
+
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+
+  --input: #0f172a;
+
+  --navbar: #581c87;
+
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==============================
+   PAGE
+============================== */
+
+.page-content {
+  min-height: calc(100vh - 70px);
+
+  background: var(--background);
+  color: var(--text);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* ==============================
+   GENERAL TEXT
+============================== */
+
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app h5,
+.app h6 {
+  color: var(--text);
+}
+
+.app p,
+.app li {
+  color: var(--text-secondary);
+}
+
+
+/* ==============================
+   INPUTS
+============================== */
+
+.app input,
+.app textarea,
+.app select {
+  background: var(--input);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+
+/* ==============================
+   PLACEHOLDER
+============================== */
+
+.app input::placeholder,
+.app textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+
+/* ==============================
+   SMOOTH TRANSITION
+============================== */
+
+.app * {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+/* =====================================
+   APP THEME
+===================================== */
+
+.app {
+  min-height: 100vh;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.light-theme {
+  --background: #f8fafc;
+  --text: #1e293b;
+  --card-background: rgba(255, 255, 255, 0.9);
+}
+
+.dark-theme {
+  --background: #020617;
+  --text: #f8fafc;
+  --card-background: rgba(15, 23, 42, 0.9);
+}
+
+
+/* =====================================
+   THEME TOGGLE
+===================================== */
+
+.theme-toggle {
+  position: relative;
+
+  width: 115px;
+  height: 48px;
+
+  border: 2px solid rgba(255, 255, 255, 0.6);
+
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  cursor: pointer;
+
+  color: white;
+
+  transition: all 0.35s ease;
+
+  overflow: hidden;
+}
+
+
+/* LIGHT */
+
+.theme-toggle.light {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* DARK */
+
+.theme-toggle.dark {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* ICON */
+
+.toggle-icon {
+  position: relative;
+
+  z-index: 3;
+
+  font-size: 18px;
+
+  transition: transform 0.35s ease;
+}
+
+
+/* TEXT */
+
+.toggle-text {
+  position: relative;
+
+  z-index: 3;
+
+  margin-left: 7px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* MOVING CIRCLE */
+
+.toggle-circle {
+  position: absolute;
+
+  width: 34px;
+  height: 34px;
+
+  top: 5px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.25);
+
+  transition:
+    left 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+/* LIGHT POSITION */
+
+.theme-toggle.light .toggle-circle {
+  left: 5px;
+}
+
+
+/* DARK POSITION */
+
+.theme-toggle.dark .toggle-circle {
+  left: 74px;
+}
+
+
+/* DARK ICON */
+
+.theme-toggle.dark .toggle-icon {
+  transform: translateX(2px);
+}
+
+
+/* HOVER */
+
+.theme-toggle:hover {
+  transform: scale(1.04);
+}
+
+
+/* CLICK */
+
+.theme-toggle:active {
+  transform: scale(0.97);
+}
